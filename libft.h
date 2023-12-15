@@ -6,13 +6,11 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 15:01:24 by abmahfou          #+#    #+#             */
-/*   Updated: 2023/12/13 10:57:04 by abmahfou         ###   ########.fr       */
+/*   Updated: 2023/12/14 21:44:38 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include <unistd.h>
-#include <stdio.h>
 #include <stdlib.h>
 
 size_t	ft_strlen(const char *s);
@@ -47,3 +45,4 @@ char	*ft_strdup(const char *s1);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
+char	*ft_itoa(int n);
