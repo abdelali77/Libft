@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 11:03:02 by abmahfou          #+#    #+#             */
-/*   Updated: 2023/12/13 10:43:40 by abmahfou         ###   ########.fr       */
+/*   Updated: 2023/12/17 10:31:16 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,6 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*calloc_ptr;
 
-	if (count == 0 || size == 0)
-	{
-		count = 1;
-		size = 1;
-	}
 	calloc_ptr = malloc(count * size);
 	if (calloc_ptr == NULL)
 		return (NULL);
