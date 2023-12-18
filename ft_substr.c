@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 09:59:53 by abmahfou          #+#    #+#             */
-/*   Updated: 2023/12/12 21:55:36 by abmahfou         ###   ########.fr       */
+/*   Updated: 2023/12/17 21:06:40 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (!s)
 		return (NULL);
-	if (ft_strlen(s) < len)
-		size_to_allocate = ft_strlen(s);
-	else
+	if (start > ft_strlen(s))
+		return (ft_strdup(""));
+	if (ft_strlen(s + start) > len)
 		size_to_allocate = len;
+	else
+		size_to_allocate = ft_strlen(s + start);
 	sub_str = malloc((size_to_allocate + 1) * sizeof(char));
 	if (sub_str == NULL)
 		return (NULL);
