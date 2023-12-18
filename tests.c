@@ -1,3 +1,5 @@
+#include "libft.h"
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -217,9 +219,8 @@
 // ft_substr
 // int main()
 // {
-// 	char s[] = "123456789";
-// 	// char *h = ft_substr(s, 2, 3000000000);
-// 	char *h = ft_substr(s, 3, 42000000);
+// 	//char s[] = "123456789";
+// 	char *h = ft_substr("hola", 4294967295, 0);
 // 	printf("%s\n", h);
 // }
 
@@ -243,7 +244,65 @@
 // }
 
 // ft_itoa
+// int main()
+// {
+// 	printf("%s\n", ft_itoa(483648));
+// }
+
+// ft_strmapi
+// char	to_upper(unsigned int n, char c)  
+// {
+// 	(void) n;
+// 	if (c >= 'A' && c <= 'Z')
+// 		return (c + 32);
+// 	return (c);
+// }
+// int main(void)  
+// {
+// 	char s[] = "HELLO";
+//     printf("%s\n", ft_strmapi(s, to_upper));
+//     return (0);
+// }
+
+// ft_striteri
+// void	to_upper(unsigned int n, char c)  
+// {
+// 	(void) n;
+// 	if (c >= 'A' && c <= 'Z')
+// 	{
+// 		c += 32;
+// 		write(1, &c, 1);
+// 	}
+// 	write(1, &c, 1);
+// }
+// int main(void)  
+// {
+// 	char s[] = "HELLO";
+// 	ft_striteri(s, to_upper);
+//     printf("%s\n", s);
+//     return (0);
+// }
+
+// ft_split
 int main()
 {
-	printf("%s\n", ft_itoa(483648));
+	char s[] = " is this wi";
+	int i = 0;
+	char **arr = ft_split(s, ' ');
+	while (i < 3)
+	{
+		printf("%s\n", arr[i]);
+		i++;
+	}
+	i = 0;
+	while (i < 3)
+		free(arr[i++]);
+	free(arr);
+
+	while(1);
 }
+
+
+
+// ABCABCD  SRC => STR
+//		    DST => STR + 3  SIZE 4  
