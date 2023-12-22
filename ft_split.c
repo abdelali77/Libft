@@ -6,13 +6,13 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 19:27:54 by abmahfou          #+#    #+#             */
-/*   Updated: 2023/12/18 12:04:00 by abmahfou         ###   ########.fr       */
+/*   Updated: 2023/12/21 12:44:11 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	count_words(char const *s, char c)
+static size_t	count_words(char const *s, char c)
 {
 	int	count;
 	int	i;
@@ -33,7 +33,7 @@ size_t	count_words(char const *s, char c)
 	return (count);
 }
 
-char	**free_mem(char **split)
+static char	**free_mem(char **split)
 {
 	int	n;
 
@@ -47,7 +47,7 @@ char	**free_mem(char **split)
 	return (NULL);
 }
 
-char	*fill(char const *s, char c, int *error)
+static char	*fill(char const *s, char c, int *error)
 {
 	char	*str;
 	int		i;
