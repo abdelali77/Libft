@@ -284,25 +284,27 @@
 // }
 
 // ft_split
+// int main()
+// {
+// 	char s[] = " is this wi";
+// 	int i = 0;
+// 	char **arr = ft_split(s, ' ');
+// 	while (i < 3)
+// 	{
+// 		printf("%s\n", arr[i]);
+// 		i++;
+// 	}
+// }
+
+// ft_lstnew
 int main()
 {
-	char s[] = " is this wi";
-	int i = 0;
-	char **arr = ft_split(s, ' ');
-	while (i < 3)
-	{
-		printf("%s\n", arr[i]);
-		i++;
-	}
-	i = 0;
-	while (i < 3)
-		free(arr[i++]);
-	free(arr);
+	int	*n;
 
-	while(1);
+	n = malloc(sizeof(int));
+	*n = 1337;
+	t_list *node1 = ft_lstnew(n);
+	t_list *node2 = ft_lstnew(" is the best");
+	printf("%d", *(int *)node1->content);
+	printf("%s\n", (char *)node2->content);
 }
-
-
-
-// ABCABCD  SRC => STR
-//		    DST => STR + 3  SIZE 4  
