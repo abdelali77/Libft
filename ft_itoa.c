@@ -6,13 +6,13 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/14 11:56:13 by abmahfou          #+#    #+#             */
-/*   Updated: 2023/12/16 14:44:30 by abmahfou         ###   ########.fr       */
+/*   Updated: 2023/12/20 11:24:45 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_digits(long num)
+static int	count_digits(long num)
 {
 	int	i;
 
@@ -28,7 +28,7 @@ int	count_digits(long num)
 	return (i);
 }
 
-char	*reversed_string(char *s)
+static char	*reversed_string(char *s)
 {
 	int		i;
 	int		j;
