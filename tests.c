@@ -297,14 +297,98 @@
 // }
 
 // ft_lstnew
+// int main()
+// {
+// 	int	*n;
+
+// 	n = malloc(sizeof(int));
+// 	*n = 1337;
+// 	t_list *node1 = ft_lstnew(n);
+// 	t_list *node2 = ft_lstnew(" is the best");
+// 	printf("%d", *(int *)node1->content);
+// 	printf("%s\n", (char *)node2->content);
+// }
+
+// ft_lstadd_front
+// int main()
+// {
+// 	t_list *head = NULL;
+// 	t_list *n1 = ft_lstnew("1337");
+// 	ft_lstadd_front(&head, n1);
+// 	t_list *n2 = ft_lstnew("NeH");
+// 	ft_lstadd_front(&head, n2);
+// 	t_list *n3 = ft_lstnew("aaa");
+// 	ft_lstadd_front(&head, n3);
+
+// 	t_list *curr = head;
+// 	while (curr != NULL)
+// 	{
+// 		printf("%s\n", (char *)curr->content);
+// 		curr = curr->next;
+// 	}
+// }
+
+// ft_lstsize
+// int main()
+// {
+// 	t_list *head = NULL;
+// 	t_list *n1 = ft_lstnew("1337");
+// 	ft_lstadd_front(&head, n1);
+// 	t_list *n2 = ft_lstnew("NeH");
+// 	ft_lstadd_front(&head, n2);
+// 	// t_list *n3 = ft_lstnew("aaa");
+// 	// ft_lstadd_front(&head, n3);
+
+// 	int	n = ft_lstsize(head);
+// 	printf("%d\n", n);
+// }
+
+// ft_lstlast
+// int main()
+// {
+// 	t_list *head = NULL;
+// 	t_list *n1 = ft_lstnew("1337");
+// 	ft_lstadd_front(&head, n1);
+// 	t_list *n2 = ft_lstnew("NeH");
+// 	ft_lstadd_front(&head, n2);
+
+// 	t_list *n = ft_lstlast(head);
+// 	printf("%s\n", (char *)n->content);
+// }
+
+// ft_lstadd_back
+// int main()
+// {
+// 	t_list *head = NULL;
+// 	t_list *n1 = ft_lstnew("1337");
+// 	ft_lstadd_back(&head, n1);
+// 	t_list *n2 = ft_lstnew("NeH");
+// 	ft_lstadd_back(&head, n2);
+
+// 	t_list *curr = head;
+// 	while (curr != NULL)
+// 	{
+// 		printf("%s\n", curr->content);
+// 		curr = curr->next;
+// 	}
+// }
+
+// ft_lstdelone
+void	clean(void *content)
+{
+	free(content);
+}
 int main()
 {
-	int	*n;
-
-	n = malloc(sizeof(int));
-	*n = 1337;
-	t_list *node1 = ft_lstnew(n);
-	t_list *node2 = ft_lstnew(" is the best");
-	printf("%d", *(int *)node1->content);
-	printf("%s\n", (char *)node2->content);
+	t_list *head = NULL;
+	t_list *node = ft_lstnew("1337");
+	t_list *node2 = ft_lstnew("77");
+	ft_lstadd_back(&head, node2);
+	ft_lstclear(&head, clean);
+	t_list *curr = head;
+	while (curr != NULL)
+	{
+		printf("%s\n", (char *)node->content);
+		curr = curr->next;
+	}
 }
