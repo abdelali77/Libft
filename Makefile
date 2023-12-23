@@ -6,7 +6,7 @@
 #    By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/13 12:34:49 by abmahfou          #+#    #+#              #
-#    Updated: 2023/12/21 19:02:29 by abmahfou         ###   ########.fr        #
+#    Updated: 2023/12/23 10:41:08 by abmahfou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,7 +53,8 @@ SRC_B = ft_lstnew_bonus.c \
         ft_lstlast_bonus.c \
         ft_lstadd_back_bonus.c \
         ft_lstdelone_bonus.c \
-        ft_lstclear_bonus.c 
+        ft_lstclear_bonus.c \
+        ft_lstiter_bonus.c 
 
 CC = cc
 
