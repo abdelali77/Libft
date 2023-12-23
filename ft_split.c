@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 19:27:54 by abmahfou          #+#    #+#             */
-/*   Updated: 2023/12/21 12:44:11 by abmahfou         ###   ########.fr       */
+/*   Updated: 2023/12/21 23:50:28 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,8 +77,6 @@ char	**ft_split(char const *s, char c)
 	int		n;
 	int		error;
 
-	if (!s)
-		return (NULL);
 	n = 0;
 	error = 0;
 	arr = malloc((count_words(s, c) + 1) * sizeof(char *));
