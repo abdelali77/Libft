@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/20 12:33:11 by abmahfou          #+#    #+#             */
-/*   Updated: 2023/12/21 10:03:58 by abmahfou         ###   ########.fr       */
+/*   Updated: 2023/12/22 17:18:25 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_lstsize(t_list *lst)
 	while (lst != NULL)
 	{
 		lst = lst->next;
-		counter++; 
+		counter++;
 	}
 	return (counter);
 }
