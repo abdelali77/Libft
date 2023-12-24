@@ -188,11 +188,16 @@
 // int main()
 // {
 // 	// Testing ft_calloc with an empty string
-// 	char *empty_string = ft_calloc(0, 0);
+// 	int *empty_string = ft_calloc(0, 0);
 
+// 	printf("[%d]", empty_string[0]);
+// 	printf("[%d]", empty_string[1]);
+// 	printf("[%d]", empty_string[2]);
+// 	printf("[%d]", empty_string[3]);
+// 	printf("[%d]", empty_string[4]);
+// 	printf("[%d]\n", empty_string[5]);
 // 	if (empty_string == NULL) {
 // 		printf("Memory allocation failed for empty string.\n");
-// 		return 1;
 // 	}
 
 // 	// Ensure the allocated memory contains an empty string or null terminator
@@ -201,10 +206,6 @@
 // 	} else {
 // 		printf("Allocation successful, but memory does not contain an empty string.\n");
 // 	}
-
-// 	// Free allocated memory
-// 	free(empty_string);
-
 // 	return 0;
 // }
 
@@ -373,22 +374,73 @@
 // 	}
 // }
 
-// ft_lstdelone
+//ft_lstdelone AND ft_lstdelone AND ft_lstiter
 void	clean(void *content)
 {
 	free(content);
 }
+void	*edit(void *content)
+{
+	char *s = (char *)content;
+	// int *s = (int *)content;
+	// *s += 100;
+	int i = 0;
+	while (s[i])
+	{
+		s[i] += 32;
+		i++;
+	}
+	return (s);
+}
+// int main()
+// {
+// 	t_list *head = NULL;
+// 	int s;
+// 	int *ss = &s;
+// 	s = 100;
+// 	t_list *node1 = ft_lstnew(ft_strdup("1337"));
+// 	t_list *node2 = ft_lstnew(ft_strdup("13"));
+// 	t_list *node3 = ft_lstnew(ft_strdup("37"));
+// 	t_list *node4 = ft_lstnew(ft_strdup("aaa"));
+// 	t_list *node5 = ft_lstnew(ss);
+// 	ft_lstadd_back(&head, node1);
+// 	ft_lstadd_back(&head, node2);
+// 	ft_lstadd_back(&head, node3);
+// 	ft_lstadd_back(&head, node4);
+// 	ft_lstadd_back(&head, node5);
+// 	ft_lstdelone(node2, clean);
+// 	node1->next = node3;
+// 	t_list *curr = head;
+// 	ft_lstclear(&head, clean);
+// 	node2->next = NULL;
+// 	ft_lstiter(node4, edit);
+// 	ft_lstiter(node5, edit);
+// 	t_list *curr = head;
+// 	printf("%d\n", *(int *)curr->next->next->next->next->content);
+// 	while (curr != NULL)
+// 	{
+// 		printf("%s\n", (char *)curr->content);
+// 		curr = curr->next;
+// 	}	
+// }
+
+// ft_lstmap
 int main()
 {
 	t_list *head = NULL;
-	t_list *node = ft_lstnew("1337");
-	t_list *node2 = ft_lstnew("77");
+	t_list *node1 = ft_lstnew(strdup("NNN"));
+	t_list *node2 = ft_lstnew(strdup("HHH"));
+	t_list *node3 = ft_lstnew(strdup("EEE"));
+	t_list *node4 = ft_lstnew(strdup("AAA"));
+	ft_lstadd_back(&head, node1);
 	ft_lstadd_back(&head, node2);
-	ft_lstclear(&head, clean);
+	ft_lstadd_back(&head, node3);
+	ft_lstadd_back(&head, node4);
+	ft_lstmap(head, edit, clean);
 	t_list *curr = head;
 	while (curr != NULL)
 	{
-		printf("%s\n", (char *)node->content);
+		printf("%s\n", (char *)curr->content);
 		curr = curr->next;
-	}
+	}    
 }
