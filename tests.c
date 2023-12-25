@@ -446,6 +446,7 @@
 // --------------------------------------------------------- //
 
 //ft_lstdelone AND ft_lstdelone AND ft_lstiter
+/*
 void	clean(void *content)
 {
 	free(content);
@@ -463,6 +464,7 @@ void	*edit(void *content)
 	}
 	return (s);
 }
+*/
 // int main()
 // {
 // 	t_list *head = NULL;
@@ -498,6 +500,7 @@ void	*edit(void *content)
 // --------------------------------------------------------- //
 
 // ft_lstmap
+/*
 int main()
 {
 	t_list *head = NULL;
@@ -517,5 +520,6 @@ int main()
 		curr = curr->next;
 	}    
 }
+*/
 
 // --------------------------------------------------------- //
