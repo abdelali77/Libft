@@ -459,7 +459,8 @@ void	*edit(void *content)
 	int i = 0;
 	while (s[i])
 	{
-		s[i] += 32;
+		if (s[i] >= 'A' && s[i] <= 'Z')
+			s[i] += 32;
 		i++;
 	}
 	return (s);
