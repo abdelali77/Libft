@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 21:05:00 by abmahfou          #+#    #+#             */
-/*   Updated: 2023/12/24 21:30:41 by abmahfou         ###   ########.fr       */
+/*   Updated: 2023/12/26 17:48:56 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,6 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	while (lst != NULL)
 	{
 		c = f(lst->content);
-		if (!c)
-		{
-			ft_lstclear(&n_list, del);
-			return (NULL);
-		}
 		n_node = ft_lstnew(c);
 		if (!n_node)
 		{
