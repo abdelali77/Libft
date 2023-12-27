@@ -11,7 +11,7 @@
 // ft_atoi
 // int main()
 // {
-// 	char s[] = "     \v\r\t214748434336478fdfd";
+// 	char s[] = "     \v\r\t21477778fdfd";
 // 	printf("%d\n", atoi(s));
 // }
 
@@ -110,12 +110,12 @@
 
 // --------------------------------------------------------- //
 
-// ft_memset
+//ft_memset
 // int main()
 // {
 // 	char string[100];
 // 	printf("%s\n", ft_memset(string , '~', sizeof(char) * 7));
-// };
+// }
 
 // --------------------------------------------------------- //
 
@@ -257,7 +257,7 @@
 // ft_strdup
 // int main()
 // {
-// 	char s[] = "abdelali";
+// 	char *s = NULL;
 // 	char *s1 = ft_strdup(s);
 // 	printf("%s\n", s1);
 // }
@@ -277,8 +277,8 @@
 // ft_strjoin
 // int main()
 // {
-// 	char *s1 = NULL;
-// 	char *s2 = NULL;
+// 	char *s1 = "NULL";
+// 	char *s2 = "heelo";
 // 	char *s = ft_strjoin(s1, s2);
 // 	printf("%s\n", s);
 // }
@@ -323,19 +323,18 @@
 // --------------------------------------------------------- //
 
 // ft_striteri
-// void	to_upper(unsigned int n, char c)  
+// void	to_upper(unsigned int n, char *c)  
 // {
 // 	(void) n;
-// 	if (c >= 'A' && c <= 'Z')
+// 	int i = 0;
+// 	if (c[i] >= 'A' && c[i] <= 'Z')
 // 	{
-// 		c += 32;
-// 		write(1, &c, 1);
+// 		c[i] += 32;
 // 	}
-// 	write(1, &c, 1);
 // }
 // int main(void)  
 // {
-// 	char s[] = "HELLO";
+// 	char s[] = "ABDElaLI";
 // 	ft_striteri(s, to_upper);
 //     printf("%s\n", s);
 //     return (0);
@@ -426,46 +425,47 @@
 
 // --------------------------------------------------------- //
 
-// ft_lstadd_back
-// int main()
-// {
-// 	t_list *head = NULL;
-// 	t_list *n1 = ft_lstnew("1337");
-// 	ft_lstadd_back(&head, n1);
-// 	t_list *n2 = ft_lstnew("NeH");
-// 	ft_lstadd_back(&head, n2);
+//ft_lstadd_back
+/*
+int main()
+{
+	t_list *head = NULL;
+	t_list *n1 = ft_lstnew("1337");
+	ft_lstadd_back(&head, n1);
+	t_list *n2 = ft_lstnew("NeH");
+	n1->next = n2;
+	ft_lstadd_back(&head, NULL);
 
-// 	t_list *curr = head;
-// 	while (curr != NULL)
-// 	{
-// 		printf("%s\n", curr->content);
-// 		curr = curr->next;
-// 	}
-// }
+	t_list *curr = head;
+	while (curr != NULL)
+	{
+		printf("%s\n", curr->content);
+		curr = curr->next;
+	}
+}
+*/
 
 // --------------------------------------------------------- //
 
-//ft_lstdelone AND ft_lstdelone AND ft_lstiter
-/*
-void	clean(void *content)
-{
-	free(content);
-}
-void	*edit(void *content)
-{
-	char *s = (char *)content;
-	// int *s = (int *)content;
-	// *s += 100;
-	int i = 0;
-	while (s[i])
-	{
-		if (s[i] >= 'A' && s[i] <= 'Z')
-			s[i] += 32;
-		i++;
-	}
-	return (s);
-}
-*/
+//ft_lstdelone AND ft_lstiter
+// void	clean(void *content)
+// {
+// 	free(content);
+// }
+// void	*edit(void *content)
+// {
+// 	char *s = (char *)content;
+// 	// int *s = (int *)content;
+// 	// *s += 100;
+// 	int i = 0;
+// 	while (s[i])
+// 	{
+// 		if (s[i] >= 'A' && s[i] <= 'Z')
+// 			s[i] += 32;
+// 		i++;
+// 	}
+// 	return (s);
+// }
 // int main()
 // {
 // 	t_list *head = NULL;
@@ -505,10 +505,10 @@ void	*edit(void *content)
 int main()
 {
 	t_list *head = NULL;
-	t_list *node1 = ft_lstnew(strdup("NNN"));
-	t_list *node2 = ft_lstnew(strdup("HHH"));
-	t_list *node3 = ft_lstnew(strdup("EEE"));
-	t_list *node4 = ft_lstnew(strdup("AAA"));
+	t_list *node1 = ft_lstnew(strdup("eeee"));
+	t_list *node2 = ft_lstnew(strdup("H"));
+	t_list *node3 = ft_lstnew(strdup("NNNN"));
+	t_list *node4 = ft_lstnew(strdup("AA"));
 	ft_lstadd_back(&head, node1);
 	ft_lstadd_back(&head, node2);
 	ft_lstadd_back(&head, node3);
@@ -524,3 +524,46 @@ int main()
 */
 
 // --------------------------------------------------------- //
+
+// ft_putchar_fd
+#include <fcntl.h>
+/*
+int main()
+{
+	int	fd = open("putchar.txt", O_RDWR | O_CREAT);
+	ft_putchar_fd('N', fd);
+	printf("%d\n", fd);
+	close(fd);
+}
+*/
+
+// ft_putstr_fd
+/*
+int main()
+{
+	int fd = open("putstr.txt", O_RDWR | O_CREAT);
+	ft_putstr_fd("YYYYyyy", fd);
+	printf("%d\n", fd);
+	close(fd);
+}
+*/
+
+// ft_putendl_fd
+/*
+int main()
+{
+	int fd = open("putendl.txt", O_RDWR | O_CREAT);
+	ft_putendl_fd("End", fd);
+	printf("%d\n", fd);
+	close(fd);
+}
+*/
+
+// ft_putnbr_fd
+int main()
+{
+	int fd = open("putnbr.txt", O_RDWR | O_CREAT);
+	ft_putnbr_fd(1337, fd);
+	printf("%d\n", fd);
+	close(fd);
+}
