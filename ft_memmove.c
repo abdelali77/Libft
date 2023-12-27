@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 21:21:21 by abmahfou          #+#    #+#             */
-/*   Updated: 2023/12/17 15:14:08 by abmahfou         ###   ########.fr       */
+/*   Updated: 2023/12/26 22:17:14 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		q = len;
 		while (q > 0)
 		{
-			destination[q - 1] = source[q - 1];
+			*(destination + q - 1) = *(source + q - 1);
 			q--;
 		}
 	}
