@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 10:50:25 by abmahfou          #+#    #+#             */
-/*   Updated: 2023/12/13 10:10:45 by abmahfou         ###   ########.fr       */
+/*   Updated: 2023/12/26 22:16:35 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	q = 0;
 	while (q < n)
 	{
-		destination[q] = source[q];
+		*(destination + q) = *(source + q);
 		q++;
 	}
 	return (destination);
