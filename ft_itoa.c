@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/14 11:56:13 by abmahfou          #+#    #+#             */
-/*   Updated: 2023/12/20 11:24:45 by abmahfou         ###   ########.fr       */
+/*   Updated: 2023/12/25 15:50:24 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,8 +64,9 @@ char	*ft_itoa(int n)
 		return (NULL);
 	while (m)
 	{
-		*(str + i++) = m % 10 + '0';
+		*(str + i) = m % 10 + '0';
 		m /= 10;
+		i++;
 	}
 	if (negative)
 		*(str + i) = '-';
