@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 18:21:54 by abmahfou          #+#    #+#             */
-/*   Updated: 2023/12/11 18:24:31 by abmahfou         ###   ########.fr       */
+/*   Updated: 2023/12/27 18:30:29 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_putstr_fd(char *s, int fd)
 	int	i;
 
 	i = 0;
+	if (!s)
+		return ;
 	while (*(s + i))
 	{
 		write(fd, s + i, 1);
