@@ -6,7 +6,7 @@
 #    By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/13 12:34:49 by abmahfou          #+#    #+#              #
-#    Updated: 2023/12/25 15:09:47 by abmahfou         ###   ########.fr        #
+#    Updated: 2023/12/28 18:34:27 by abmahfou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,22 +61,24 @@ CC = cc
 
 CFLAGS = -Wall -Wextra -Werror
 
+HEADER = libft.h
+
 OBJS = $(SRC:.c=.o)
 
 OBJS_B = $(SRC_B:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
+$(NAME): $(OBJS) $(HEADER)
 	ar rcs $(NAME) $(OBJS)
 
 clean: 
-	rm -f $(OBJS) $(OBJS_B)
+	rm -rf $(OBJS) $(OBJS_B)
 
 fclean: clean
-	rm -f $(NAME)
+	rm -rf $(NAME)
 
 re: fclean all
 
-bonus: $(OBJS_B) $(OBJS)
-	ar rcs $(NAME) $(OBJS_B) $(OBJS)
+bonus: $(OBJS_B) $(HEADER)
+	ar rcs $(NAME) $(OBJS_B)
