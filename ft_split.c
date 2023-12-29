@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 19:27:54 by abmahfou          #+#    #+#             */
-/*   Updated: 2023/12/21 23:50:28 by abmahfou         ###   ########.fr       */
+/*   Updated: 2023/12/27 22:46:10 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ static size_t	count_words(char const *s, char c)
 
 	count = 0;
 	i = 0;
+	if (!s)
+		return (0);
 	while (*(s + i))
 	{
 		while (*(s + i) == c && *(s + i))
@@ -47,7 +49,7 @@ static char	**free_mem(char **split)
 	return (NULL);
 }
 
-static char	*fill(char const *s, char c, int *error)
+static char	*fill(char const *s, char c)
 {
 	char	*str;
 	int		i;
@@ -57,10 +59,7 @@ static char	*fill(char const *s, char c, int *error)
 		i++;
 	str = malloc((i + 1) * sizeof(char));
 	if (str == NULL)
-	{
-		*error = 1;
 		return (NULL);
-	}
 	i = 0;
 	while (*(s + i) && *(s + i) != c)
 	{
@@ -75,10 +74,10 @@ char	**ft_split(char const *s, char c)
 {
 	char	**arr;
 	int		n;
-	int		error;
 
+	if (!s)
+		return (NULL);
 	n = 0;
-	error = 0;
 	arr = malloc((count_words(s, c) + 1) * sizeof(char *));
 	if (arr == NULL)
 		return (NULL);
@@ -88,8 +87,8 @@ char	**ft_split(char const *s, char c)
 			s++;
 		if (*s && *s != c)
 		{
-			*(arr + n++) = fill(s, c, &error);
-			if (error)
+			*(arr + n++) = fill(s, c);
+			if (*(arr + n - 1) == NULL)
 				return (free_mem(arr));
 			while (*s && *s != c)
 				s++;
