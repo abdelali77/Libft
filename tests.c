@@ -111,11 +111,11 @@
 // --------------------------------------------------------- //
 
 //ft_memset
-// int main()
-// {
-// 	char string[100];
-// 	printf("%s\n", ft_memset(string , '~', sizeof(char) * 7));
-// }
+int main()
+{
+	//char string[100];
+	printf("%s\n", ft_memset(NULL , '~', sizeof(char) * 7));
+}
 
 // --------------------------------------------------------- //
 
@@ -130,25 +130,26 @@
 // --------------------------------------------------------- //
 
 // ft_memcpy
-// int main()
-// {
-// 	// char str[] = "ABCDEF";
-// 	// //char dst[20];
-// 	// char *s = ft_memcpy(str + 2, str, 20);
-// 	// // Destination and source are overlapping
-// 	// printf("String: %s\n", s);
-// 	int ints[] = {0, 34, 5};
-// 	int ints2[3];
 
-// 	//memcpy(ints2, ints, sizeof(ints));
-// 	ft_memcpy(ints2, ints, sizeof(ints2));
-// 	int i = 0;
-// 	while (i < 3)
-// 	{
-// 		printf("[%d]", ints2[i]);
-// 		i++;
-// 	}
-// }
+/* int main()
+{
+	//char str[] = "ABCDEF";
+	//char dst[20];
+	//char *s = ft_memcpy(str + 2, str, 20);
+	//printf("String: %s\n", s);
+	int ints[] = {0, 34, 5};
+	//int ints2[3];
+
+	// ft_memcpy(NULL, NULL, sizeof(ints));
+	// memcpy(NULL, NULL, 45);
+	// int i = 0;
+	// while (i < 3)
+	// {
+	// 	printf("[%d]", ints2[i]);
+	// 	i++;
+	// }
+} */
+
 
 // --------------------------------------------------------- //
 
@@ -173,33 +174,40 @@
 // --------------------------------------------------------- //
 
 // ft_memchr
-// int main()
-// {
-// 	char s[] = "hello";
-// 	printf("%s\n", ft_memchr(s, '\0', 6));
-// 	printf("%s\n", memchr(s, '\0', 6));
-// }
+/*
+int main()
+{
+	//char s[] = "hello";
+	printf("%s\n", ft_memchr(NULL, '\0', 6));
+	printf("%s\n", memchr(NULL, '\0', 6));
+}
+*/
 
 // --------------------------------------------------------- //
 
 // ft_memcmp
-// 	int main()
-// {
-// 	char s1[] = "he\0llo";
-// 	char s2[] = "he\0llw";
-// 	printf("%d\n", ft_memcmp(s1, s2, 7));
-// 	printf("%d\n", memcmp(s1, s2, 7));
-// }
+/*
+int main()
+{
+	char s1[] = "he\0llo";
+	char s2[] = "he\0llw";
+	printf("%d\n", ft_memcmp(NULL, s2, 7));
+	printf("%d\n", memcmp(NULL, s2, 7));
+}
+*/
 
 // --------------------------------------------------------- //
 
 // ft_memmove
-// int main()
-// {
-// 	char str[8] = "ABCDEFG";
-// 	char *s = ft_memmove(str + 3, str, 5);//ft_memmove(str + 3, str, 5);
-// 	printf("%s\n", s);
-// }
+/* int main()
+{
+	char str[8] = "ABCDEFG";
+	//char str1[8] = "ABCDEFG";
+	char *s = ft_memmove(str + 2, NULL, 4);
+	//char *a = memmove(str1 + 2, NULL, 4);
+	printf("%s\n", s);
+	//printf("%s\n", a);
+} */
 
 // --------------------------------------------------------- //
 
@@ -342,18 +350,28 @@
 
 // --------------------------------------------------------- //
 
-// ft_split
-// int main()
-// {
-// 	char s[] = " is this wi";
-// 	int i = 0;
-// 	char **arr = ft_split(s, ' ');
-// 	while (i < 3)
-// 	{
-// 		printf("%s\n", arr[i]);
-// 		i++;
-// 	}
-// }
+//ft_split
+/*
+int main()
+{
+	//char s[] = " is this wi";
+	int i = 0;
+	char **arr = ft_split(NULL, ' ');
+	if (arr == NULL)
+	{
+		printf("Done");
+		return 0;
+	}
+	else{
+		while (i < 4)
+		{
+			printf("%s\n", arr[i]);
+			i++;
+		}
+	}
+}
+*/
+
 
 // --------------------------------------------------------- //
 
@@ -448,24 +466,24 @@ int main()
 // --------------------------------------------------------- //
 
 //ft_lstdelone AND ft_lstiter
-// void	clean(void *content)
-// {
-// 	free(content);
-// }
-// void	*edit(void *content)
-// {
-// 	char *s = (char *)content;
-// 	// int *s = (int *)content;
-// 	// *s += 100;
-// 	int i = 0;
-// 	while (s[i])
-// 	{
-// 		if (s[i] >= 'A' && s[i] <= 'Z')
-// 			s[i] += 32;
-// 		i++;
-// 	}
-// 	return (s);
-// }
+void	clean(void *content)
+{
+	free(content);
+}
+void	*edit(void *content)
+{
+	char *s = (char *)content;
+	// int *s = (int *)content;
+	// *s += 100;
+	int i = 0;
+	while (s[i])
+	{
+		if (s[i] >= 'A' && s[i] <= 'Z')
+			s[i] += 32;
+		i++;
+	}
+	return (s);
+}
 // int main()
 // {
 // 	t_list *head = NULL;
@@ -501,8 +519,8 @@ int main()
 // --------------------------------------------------------- //
 
 // ft_lstmap
-/*
-int main()
+
+/* int main()
 {
 	t_list *head = NULL;
 	t_list *node1 = ft_lstnew(strdup("eeee"));
@@ -513,15 +531,15 @@ int main()
 	ft_lstadd_back(&head, node2);
 	ft_lstadd_back(&head, node3);
 	ft_lstadd_back(&head, node4);
-	ft_lstmap(head, edit, clean);
+	t_list *map = ft_lstmap(head, edit, clean);
 	t_list *curr = head;
 	while (curr != NULL)
 	{
-		printf("%s\n", (char *)curr->content);
-		curr = curr->next;
+		printf("%s\n", (char *)map->content);
+		map = map->next;
 	}    
-}
-*/
+} */
+
 
 // --------------------------------------------------------- //
 
@@ -560,6 +578,7 @@ int main()
 */
 
 // ft_putnbr_fd
+/*
 int main()
 {
 	int fd = open("putnbr.txt", O_RDWR | O_CREAT);
@@ -567,3 +586,4 @@ int main()
 	printf("%d\n", fd);
 	close(fd);
 }
+*/
