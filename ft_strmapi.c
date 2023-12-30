@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/14 21:44:19 by abmahfou          #+#    #+#             */
-/*   Updated: 2023/12/17 11:49:23 by abmahfou         ###   ########.fr       */
+/*   Updated: 2023/12/26 13:35:04 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	if (!s)
 		return (NULL);
+	if (!f)
+		return (ft_strdup(s));
 	i = 0;
 	str = malloc((ft_strlen(s) + 1) * sizeof(char));
 	if (str == NULL)
