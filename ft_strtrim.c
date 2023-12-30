@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 10:48:37 by abmahfou          #+#    #+#             */
-/*   Updated: 2023/12/19 10:13:52 by abmahfou         ###   ########.fr       */
+/*   Updated: 2023/12/26 13:04:26 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		i;
 	int		n;
 
-	if (!s1 || !set)
+	if (!s1)
 		return (NULL);
+	if (!set)
+		return (ft_strdup(s1));
 	n = ft_strlen(s1);
 	i = 0;
 	while (*(s1 + i) && ft_strchr(set, *(s1 + i)))
