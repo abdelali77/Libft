@@ -111,11 +111,11 @@
 // --------------------------------------------------------- //
 
 //ft_memset
-int main()
+/* int main()
 {
 	//char string[100];
 	printf("%s\n", ft_memset(NULL , '~', sizeof(char) * 7));
-}
+} */
 
 // --------------------------------------------------------- //
 
@@ -137,10 +137,10 @@ int main()
 	//char dst[20];
 	//char *s = ft_memcpy(str + 2, str, 20);
 	//printf("String: %s\n", s);
-	int ints[] = {0, 34, 5};
+	//int ints[] = {0, 34, 5};
 	//int ints2[3];
 
-	// ft_memcpy(NULL, NULL, sizeof(ints));
+	ft_memcpy("", "", sizeof(char));
 	// memcpy(NULL, NULL, 45);
 	// int i = 0;
 	// while (i < 3)
@@ -212,13 +212,13 @@ int main()
 // --------------------------------------------------------- //
 
 // ft_strnstr
-// int main()
-// {
-// 	char str[] = "hello world!";
-// 	char to_find[] = "t";
-// 	printf("%s\n", ft_strnstr(str, to_find, 54));
-// 	printf("%s\n", strnstr(str, to_find, 54));
-// }
+int main()
+{
+	char str[] = "hello world!";
+	char to_find[] = "lo";
+	printf("%s\n", ft_strnstr(str, to_find, 5));
+	printf("%s\n", strnstr(str, to_find, 5));
+}
 
 // --------------------------------------------------------- //
 
