@@ -212,13 +212,13 @@ int main()
 // --------------------------------------------------------- //
 
 // ft_strnstr
-int main()
+/* int main()
 {
 	char str[] = "hello world!";
 	char to_find[] = "lo";
 	printf("%s\n", ft_strnstr(str, to_find, 5));
 	printf("%s\n", strnstr(str, to_find, 5));
-}
+} */
 
 // --------------------------------------------------------- //
 
@@ -263,12 +263,14 @@ int main()
 // --------------------------------------------------------- //
 
 // ft_strdup
-// int main()
-// {
-// 	char *s = NULL;
-// 	char *s1 = ft_strdup(s);
-// 	printf("%s\n", s1);
-// }
+/* int main()
+{
+	char *s = "Hello";
+	char *s1 = ft_strdup(s);
+	char *s2 = strdup(s);
+	printf("%s\n", s1);
+	printf("%s\n", s2);
+} */
 
 // --------------------------------------------------------- //
 
@@ -376,17 +378,17 @@ int main()
 // --------------------------------------------------------- //
 
 // ft_lstnew
-// int main()
-// {
-// 	int	*n;
+/* int main()
+{
+	int	*n;
 
-// 	n = malloc(sizeof(int));
-// 	*n = 1337;
-// 	t_list *node1 = ft_lstnew(n);
-// 	t_list *node2 = ft_lstnew(" is the best");
-// 	printf("%d", *(int *)node1->content);
-// 	printf("%s\n", (char *)node2->content);
-// }
+	n = malloc(sizeof(int));
+	*n = 1337;
+	t_list *node1 = ft_lstnew(n);
+	t_list *node2 = ft_lstnew("is the best");
+	printf("%d\n", *(int *)node1->content);
+	printf("%s\n", (char *)node2->content);
+} */
 
 // --------------------------------------------------------- //
 
