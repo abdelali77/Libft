@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 19:27:54 by abmahfou          #+#    #+#             */
-/*   Updated: 2023/12/27 22:46:10 by abmahfou         ###   ########.fr       */
+/*   Updated: 2023/12/29 19:10:49 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,9 @@ static char	**free_mem(char **split)
 	int	n;
 
 	n = 0;
-	while (split[n])
+	while (*(split + n))
 	{
-		free(split[n]);
+		free(*(split + n));
 		n++;
 	}
 	free(split);
