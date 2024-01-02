@@ -114,7 +114,13 @@
 /* int main()
 {
 	//char string[100];
-	printf("%s\n", ft_memset(NULL , '~', sizeof(char) * 7));
+	int x = 10;
+	ft_memset(&x, 0b00100111, 4);
+	ft_memset(&x, 0b10101100, 3);
+	ft_memset(&x, 0b11110010, 2);
+	ft_memset(&x, 0b01001101, 1);
+	printf("%d", x);
+	//printf("%s\n", ft_memset(NULL , '~', sizeof(char) * 7));
 } */
 
 // --------------------------------------------------------- //
