@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 15:02:33 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/01/02 15:23:41 by abmahfou         ###   ########.fr       */
+/*   Updated: 2023/12/20 11:27:33 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,7 @@ size_t	ft_strlen(const char *s)
 	int	len;
 
 	len = 0;
-	// if (!s)
-	// 	return;
-	while (len[s])
+	while (s[len])
 		len++;
 	return (len);
 }
