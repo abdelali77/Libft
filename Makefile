@@ -6,7 +6,7 @@
 #    By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/13 12:34:49 by abmahfou          #+#    #+#              #
-#    Updated: 2023/12/28 18:34:27 by abmahfou         ###   ########.fr        #
+#    Updated: 2024/01/02 13:22:22 by abmahfou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -80,5 +80,5 @@ fclean: clean
 
 re: fclean all
 
-bonus: $(OBJS_B) $(HEADER)
+bonus: $(OBJS_B) $(HEADER) $(NAME)
 	ar rcs $(NAME) $(OBJS_B)
