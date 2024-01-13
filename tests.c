@@ -228,16 +228,17 @@ int main()
 
 // --------------------------------------------------------- //
 
-// ft_strlcat
-// int main()
-// {
-// 	const char src[] = "klez is the best";
-// 	char dst[120] = "hello ";
-// 	char dst1[120] = "hello ";
+//ft_strlcat
+/* int main()
+{
+	const char src[] = "klez is the best";
+	char dst[120] = "hello ";
+	char dst1[120] = "hello ";
 
-// 	printf("%lu => %s\n", ft_strlcat(dst, src, 1), dst);
-// 	printf("%lu => %s\n", strlcat(dst1, src, 1), dst1);
-// }
+	printf("%lu => %s\n", ft_strlcat(dst, src, 1), dst);
+	printf("%lu => %s\n", strlcat(dst1, src, 1), dst1);
+	printf("%zu",strlcat(NULL,"ASW",0));
+} */
 
 // --------------------------------------------------------- //
 
